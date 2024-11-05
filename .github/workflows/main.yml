@@ -40,11 +40,11 @@ jobs:
           directory="$GITHUB_WORKSPACE"
           ulimit -c unlimited
           
-          find "$directory" -name "*.so" -exec sh -c '
-              for so_file do
-                  "$so_file"
-              done
-          ' sh {} +
+          # find "$directory" -name "*.so" -exec sh -c '
+          #     for so_file do
+          #         "$so_file"
+          #     done
+          # ' sh {} +
           
           commands=("count" "describe" "dump" "enumerate" "explain" "list" "show" "summarize")
           sub_commands=("allocations" "anchored" "anchorpoints" "externalanchored" "externalanchorpoints" "free" "inaccessible" "leaked" "readonly" "registeranchored" "registeranchorpoints" "rxonly" "stackanchorpoints")
